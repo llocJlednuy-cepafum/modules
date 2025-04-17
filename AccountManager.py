@@ -1,4 +1,4 @@
-__version__ = (2, 3, 0)
+__version__ = (2, 3, 1)
 
 # -------------------------------------------------------------------------------- 
 #                                                                                  
@@ -6,7 +6,7 @@ __version__ = (2, 3, 0)
 # Description: нᴀстᴘойкᴀ конфидᴇнциᴀльности в ᴛᴇʟᴇɢʀᴀᴍ                          
 # meta developer: @llocJlednuy_cepafum, @ManulMods                                             
 # authors: @llocJlednuy_cepafum, @ManulMods
-# version: 2.3.0                                                                                 
+# version: 2.3.1                                                                                 
 #
 # █▀▀ █▀▀ █▀█ ▄▀▄ █▀▀ █ █ █▄ ▄█
 # █▄▄ ██▄ █▀▀ █▀█ █▀  █▄█ █ ▀ █
@@ -27,7 +27,7 @@ class AccountManager(loader.Module):
         "name": "AccountManager",
         "description": "нᴀстᴘойкᴀ конфидᴇнциᴀльности в ᴛᴇʟᴇɢʀᴀᴍ",
         "authors": "@llocJlednuy_cepafum, @ManulMods",
-        "versions": "2.3.0",
+        "versions": "2.3.1",
         "error": "<emoji document_id=5237814653010076467>🗓</emoji> нᴇ ʏдᴀлось совᴇᴘшить кᴀкиᴇ-лиҕо вᴀши дᴇйствия...",
         "bio_success": "<emoji document_id=5229132514060167056>🗓</emoji> <b>ҕио ʏспᴇшно оҕновлᴇно!</b>\n<b><emoji document_id=5237814653010076467>🗓</emoji> новоᴇ ҕио:</b> <code>{}</code>",
         "name_success": "<emoji document_id=5233429444156223307>🗓</emoji> <b>имя ʏспᴇшно измᴇнᴇно!</b>\n<b><emoji document_id=5237814653010076467>🗓</emoji> новоᴇ имя:</b> <code>{}</code>",
@@ -38,8 +38,8 @@ class AccountManager(loader.Module):
         "avatar_error": "<emoji document_id=5237814653010076467>🗓</emoji> <b>отвᴇтьтᴇ нᴀ фото сооҕщᴇниᴇ!</b>",
         "privacy_settings": "<emoji document_id=5237814653010076467>🗓</emoji> <b>нᴀстᴘойки конфидᴇнциᴀльности:</b>\n\n{}",
         "arg_missing": "<emoji document_id=5237814653010076467>🗓</emoji> <b>ʏкᴀжитᴇ ᴀᴘгʏмᴇнт!</b>",
-        "check_true": "<emoji document_id=5235875883297824772>🗓</emoji> <b>юзᴇᴘнᴇйм:</b> @{} <b>(достʏпᴇн!)</b>",
-        "check_false": "<emoji document_id=5237814653010076467>🗓</emoji> <b>юзᴇᴘнᴇйм:</b> @{} <b>(нᴇ достʏпᴇн!)</b>",
+        "check_true": "<emoji document_id=5229132514060167056>🗓</emoji> <b>юзᴇᴘнᴇйм:</b> @{} <b>(достʏпᴇн!)</b>",
+        "check_false": "<emoji document_id=5235875883297824772>🗓</emoji> <b>юзᴇᴘнᴇйм:</b> @{} <b>(нᴇ достʏпᴇн!)</b>",
         "check_false_args": "<emoji document_id=5237814653010076467>🗓</emoji> <b>пожᴀлʏйстᴀ впишитᴇ юзᴇᴘнᴇйм котоᴘый вы хотитᴇ пᴘовᴇᴘить...</b>",
         "privacy_everybody": "<emoji document_id=5235875883297824772>🗓</emoji> Все",
         "privacy_contacts": "<emoji document_id=5233429444156223307>🗓</emoji> Контакты",
@@ -124,9 +124,9 @@ class AccountManager(loader.Module):
         result = await self.check_username(self._client, username)
 
         if result:
-            await utils.answer(message, self.strings["check_true"].format(username))
-        else:
             await utils.answer(message, self.strings["check_false"].format(username))
+        else:
+            await utils.answer(message, self.strings["check_true"].format(username))
     
     async def check_username(self, message, username: str) -> bool:
         try:
