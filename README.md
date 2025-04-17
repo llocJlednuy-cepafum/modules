@@ -1,4 +1,4 @@
-# Information!
+# Information
 
 Our modules with the user will be released here:
 - github.com/Ya-Manul.
