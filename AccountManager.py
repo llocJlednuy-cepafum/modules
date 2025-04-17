@@ -129,12 +129,9 @@ class AccountManager(loader.Module):
             await utils.answer(message, self.strings["check_true"].format(username))
     
     async def check_username(self, message, username: str) -> bool:
-        try:
-            request = functions.account.CheckUsernameRequest(username=username)
-            result = await self._client(request)
-            return result
-        except Exception:
-            await message.edit(self.strings["error"])
+        request = functions.account.CheckUsernameRequest(username=username)
+        result = await self._client(request)
+        return result
 
     @loader.command()
     async def getprivacy(self, message):
