@@ -1,4 +1,4 @@
-__version__ = (2, 2, 6)
+__version__ = (2, 2, 7)
 
 # -------------------------------------------------------------------------------- 
 #                                                                                  
@@ -6,7 +6,7 @@ __version__ = (2, 2, 6)
 # Description: нᴀстᴘойкᴀ конфидᴇнциᴀльности в ᴛᴇʟᴇɢʀᴀᴍ                          
 # meta developer: @llocJlednuy_cepafum, @ManulMods                                             
 # authors: @llocJlednuy_cepafum, @ManulMods
-# version: 2.2.6                                                                                 
+# version: 2.2.7                                                                                 
 #
 # -------------------------------------------------------------------------------- 
 
@@ -22,7 +22,7 @@ class AccountManager(loader.Module):
         "name": "AccountManager",
         "description": "нᴀстᴘойкᴀ конфидᴇнциᴀльности в ᴛᴇʟᴇɢʀᴀᴍ",
         "authors": "@llocJlednuy_cepafum, @ManulMods",
-        "version": "2.2.6",
+        "versions": "2.2.7",
         "error": "<emoji document_id=5237814653010076467>🗓</emoji> нᴇ ʏдᴀлось совᴇᴘшить кᴀкиᴇ-лиҕо вᴀши дᴇйствия...",
         "bio_success": "<emoji document_id=5229132514060167056>🗓</emoji> <b>ҕио ʏспᴇшно оҕновлᴇно!</b>\n<b><emoji document_id=5237814653010076467>🗓</emoji> новоᴇ ҕио:</b> <code>{}</code>",
         "name_success": "<emoji document_id=5233429444156223307>🗓</emoji> <b>имя ʏспᴇшно измᴇнᴇно!</b>\n<b><emoji document_id=5237814653010076467>🗓</emoji> новоᴇ имя:</b> <code>{}</code>",
@@ -138,7 +138,7 @@ class AccountManager(loader.Module):
             f"<emoji document_id=5231112502573555738>🗓</emoji> <b>пᴘиглᴀшᴇния в гᴘʏппы:</b> {self._format_privacy(groups.rules)}",
             f"<emoji document_id=5231112502573555738>🗓</emoji> <b>кᴘʏжки/голосовыᴇ:</b> {self._format_privacy(voice.rules)}",
             f"<emoji document_id=5231112502573555738>🗓</emoji> <b>звонки:</b> {self._format_privacy(call.rules)}\n",
-            f"<emoji document_id=5231112502573555738>🗓</emoji> <b>ᴀᴘхив и новыᴇ чᴀты:</b> {'<emoji document_id=5237814653010076467>🗓</emoji> Скрыто' if global_settings.archive_and_mute_new_noncontact_peers else '<emoji document_id=5231112502573555738>🗓</emoji> Не скрыто'}"
+            f"<emoji document_id=5231112502573555738>🗓</emoji> <b>ᴀᴘхив и новыᴇ чᴀты:</b> {'<emoji document_id=5237814653010076467>🗓</emoji> Скрыто' if global_settings.archive_and_mute_new_noncontact_peers else '<emoji document_id=5229132514060167056>🗓</emoji> Не скрыто'}"
         )
 
         await utils.answer(
