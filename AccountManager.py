@@ -4,8 +4,8 @@ __version__ = (2, 3, 1)
 #                                                                                  
 # Name: AccountManager                                                             
 # Description: нᴀстᴘойкᴀ конфидᴇнциᴀльности в ᴛᴇʟᴇɢʀᴀᴍ                          
-# meta developer: @llocJlednuy_cepafum, @ManulMods                                             
-# authors: @llocJlednuy_cepafum, @ManulMods
+# meta developer: @ManulMods                                             
+# authors: @ManulMods
 # version: 2.3.1                                                                                 
 #
 # █▀▀ █▀▀ █▀█ ▄▀▄ █▀▀ █ █ █▄ ▄█
@@ -26,7 +26,7 @@ class AccountManager(loader.Module):
     strings = {
         "name": "AccountManager",
         "description": "нᴀстᴘойкᴀ конфидᴇнциᴀльности в ᴛᴇʟᴇɢʀᴀᴍ",
-        "authors": "@llocJlednuy_cepafum, @ManulMods",
+        "authors": "@ManulMods",
         "versions": "2.3.1",
         "error": "<emoji document_id=5237814653010076467>🗓</emoji> нᴇ ʏдᴀлось совᴇᴘшить кᴀкиᴇ-лиҕо вᴀши дᴇйствия...",
         "bio_success": "<emoji document_id=5229132514060167056>🗓</emoji> <b>ҕио ʏспᴇшно оҕновлᴇно!</b>\n<b><emoji document_id=5237814653010076467>🗓</emoji> новоᴇ ҕио:</b> <code>{}</code>",
