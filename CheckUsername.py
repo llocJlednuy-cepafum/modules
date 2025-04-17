@@ -1,4 +1,4 @@
-__version__ = (1, 0, 9)
+__version__ = (1, 1, 3)
 
 # -------------------------------------------------------------------------------- 
 #                                                                                  
@@ -6,7 +6,7 @@ __version__ = (1, 0, 9)
 # Description: пᴘовᴇᴘкᴀ имя пользовᴀтᴇля в ᴛᴇʟᴇɢʀᴀᴍ                          
 # meta developer: @llocJlednuy_cepafum, @ManulMods                                             
 # authors: @llocJlednuy_cepafum, @ManulMods
-# version: 1.0.9                                                                                 
+# version: 1.1.3                                                                                 
 #
 # █▀▀ █▀▀ █▀█ ▄▀▄ █▀▀ █ █ █▄ ▄█
 # █▄▄ ██▄ █▀▀ █▀█ █▀  █▄█ █ ▀ █
@@ -30,10 +30,10 @@ class CheckUsername(loader.Module):
         "name": "CheckUsername",
         "description": "пᴘовᴇᴘкᴀ имя пользовᴀтᴇля в ᴛᴇʟᴇɢʀᴀᴍ",
         "authors": "@llocJlednuy_cepafum, @ManulMods",
-        "versions": "1.0.7",
+        "versions": "1.1.3",
         "error": "<emoji document_id=5237814653010076467>🗓</emoji> <b>нᴇ ʏдᴀлось совᴇᴘшить вᴀши дᴇйствия...</b>",
-        "check_true": "<emoji document_id=5235875883297824772>🗓</emoji> <b>юзᴇᴘнᴇйм:</b> @{} <b>(достʏпᴇн!)</b>",
-        "check_false": "<emoji document_id=5237814653010076467>🗓</emoji> <b>юзᴇᴘнᴇйм:</b> @{} <b>(нᴇ достʏпᴇн!)</b>",
+        "check_true": "<emoji document_id=5237814653010076467>🗓</emoji> <b>юзᴇᴘнᴇйм:</b> @{} <b>(нᴇ достʏпᴇн!)</b>",
+        "check_false": "<emoji document_id=5235875883297824772>🗓</emoji> <b>юзᴇᴘнᴇйм:</b> @{} <b>(достʏпᴇн!)</b>",
         "check_false_args": "<emoji document_id=5237814653010076467>🗓</emoji> <b>пожᴀлʏйстᴀ впишитᴇ юзᴇᴘнᴇйм котоᴘый вы хотитᴇ пᴘовᴇᴘить...</b>"
     }
 
@@ -55,17 +55,13 @@ class CheckUsername(loader.Module):
         result = await self.check_username_availability(self._client, username)
 
         if result:
-            await utils.answer(message, self.strings["check_true"].format(username))
-        else:
             await utils.answer(message, self.strings["check_false"].format(username))
+        else:
+            await utils.answer(message, self.strings["check_true"].format(username))
     
     async def check_username_availability(self, message, username: str) -> bool:
-        try:
             request = functions.account.CheckUsernameRequest(username=username)
             result = await self._client(request)
             return result
-        except Exception:
-            logging.error(f"Нету такого '{username}'")
-            await message.edit(self.strings["error"])
 
         
