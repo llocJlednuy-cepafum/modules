@@ -161,13 +161,13 @@ class AccountManager(loader.Module):
         global_settings = await self._client(functions.account.GetGlobalPrivacySettingsRequest())
         
         privacy_info = (
-            f"<emoji document_id=5231112502573555738>🗓</emoji> <b>вᴘᴇмя послᴇднᴇго посᴇщᴇния:</b> {self._format_privacy(last_seen.rules)}\n",
-            f"<emoji document_id=5231112502573555738>🗓</emoji> <b>номᴇᴘ тᴇлᴇфонᴀ:</b> {self._format_privacy(phone.rules)}\n",
-            f"<emoji document_id=5231112502573555738>🗓</emoji> <b>фото пᴘофиля:</b> {self._format_privacy(profile_photo.rules)}\n",
-            f"<emoji document_id=5231112502573555738>🗓</emoji> <b>пᴇᴘᴇсылкᴀ сооҕщᴇний:</b> {self._format_privacy(forwards.rules)}\n",
-            f"<emoji document_id=5231112502573555738>🗓</emoji> <b>пᴘиглᴀшᴇния в гᴘʏппы:</b> {self._format_privacy(groups.rules)}\n",
-            f"<emoji document_id=5231112502573555738>🗓</emoji> <b>кᴘʏжки/голосовыᴇ:</b> {self._format_privacy(voice.rules)}\n",
-            f"<emoji document_id=5231112502573555738>🗓</emoji> <b>звонки:</b> {self._format_privacy(call.rules)}\n",
+            f"<emoji document_id=5231112502573555738>🗓</emoji> <b>вᴘᴇмя послᴇднᴇго посᴇщᴇния:</b> {self._format_privacy(last_seen.rules)}",
+            f"<emoji document_id=5231112502573555738>🗓</emoji> <b>номᴇᴘ тᴇлᴇфонᴀ:</b> {self._format_privacy(phone.rules)}",
+            f"<emoji document_id=5231112502573555738>🗓</emoji> <b>фото пᴘофиля:</b> {self._format_privacy(profile_photo.rules)}",
+            f"<emoji document_id=5231112502573555738>🗓</emoji> <b>пᴇᴘᴇсылкᴀ сооҕщᴇний:</b> {self._format_privacy(forwards.rules)}",
+            f"<emoji document_id=5231112502573555738>🗓</emoji> <b>пᴘиглᴀшᴇния в гᴘʏппы:</b> {self._format_privacy(groups.rules)}",
+            f"<emoji document_id=5231112502573555738>🗓</emoji> <b>кᴘʏжки/голосовыᴇ:</b> {self._format_privacy(voice.rules)}",
+            f"<emoji document_id=5231112502573555738>🗓</emoji> <b>звонки:</b> {self._format_privacy(call.rules)}",
             f"<emoji document_id=5231112502573555738>🗓</emoji> <b>ᴀᴘхив и новыᴇ чᴀты:</b> {'<emoji document_id=5237814653010076467>🗓</emoji> Скрыто' if global_settings.archive_and_mute_new_noncontact_peers else '<emoji document_id=5229132514060167056>🗓</emoji> Не скрыто'}"
         )
 
