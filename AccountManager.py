@@ -1,4 +1,4 @@
-__version__ = (2, 3, 8)
+__version__ = (2, 3, 9)
 
 # -------------------------------------------------------------------------------- 
 #                                                                                  
@@ -6,7 +6,7 @@ __version__ = (2, 3, 8)
 # Description: нᴀстᴘойкᴀ конфидᴇнциᴀльности в ᴛᴇʟᴇɢʀᴀᴍ                          
 # meta developer: @ManulMods                                             
 # authors: @ManulMods
-# version: 2.3.8                                                                                 
+# version: 2.3.9                                                                                 
 #
 # █▀▀ █▀▀ █▀█ ▄▀▄ █▀▀ █ █ █▄ ▄█
 # █▄▄ ██▄ █▀▀ █▀█ █▀  █▄█ █ ▀ █
@@ -31,25 +31,25 @@ class AccountManager(loader.Module):
         "name": "AccountManager",
         "description": "нᴀстᴘойкᴀ конфидᴇнциᴀльности в ᴛᴇʟᴇɢʀᴀᴍ",
         "authors": "@ManulMods",
-        "versions": "2.3.8",
+        "versions": "2.3.9",
         "error": "<emoji document_id=5237814653010076467>🗓</emoji> нᴇ ʏдᴀлось совᴇᴘшить кᴀкиᴇ-лиҕо вᴀши дᴇйствия...",
-        "bio_success": "<emoji document_id=5229132514060167056>🗓</emoji> <b>ҕио ʏспᴇшно оҕновлᴇно!</b>\n<b><emoji document_id=5237814653010076467>🗓</emoji> новоᴇ ҕио:</b> <code>{}</code>",
-        "name_success": "<emoji document_id=5233429444156223307>🗓</emoji> <b>имя ʏспᴇшно измᴇнᴇно!</b>\n<b><emoji document_id=5237814653010076467>🗓</emoji> новоᴇ имя:</b> <code>{}</code>",
-        "user_success": "<emoji document_id=5235875883297824772>🗓</emoji> <b>юзᴇᴘнᴇйм измᴇнᴇн!</b>\n<b><emoji document_id=5237814653010076467>🗓</emoji> новый юзᴇᴘнᴇйм:</b> @{}",
+        "bio_success": "<emoji document_id=5229132514060167056>🗓</emoji> <b>ҕио ʏспᴇшно оҕновлᴇно!</b>\n<b><emoji document_id=5237814653010076467>🗓</emoji> новоᴇ ҕио:</b> \n<code>{}</code>",
+        "name_success": "<emoji document_id=5233429444156223307>🗓</emoji> <b>имя ʏспᴇшно измᴇнᴇно!</b>\n<b><emoji document_id=5237814653010076467>🗓</emoji> новоᴇ имя:</b> \n<code>{}</code>",
+        "user_success": "<emoji document_id=5235875883297824772>🗓</emoji> <b>юзᴇᴘнᴇйм измᴇнᴇн!</b>\n<b><emoji document_id=5237814653010076467>🗓</emoji> новый юзᴇᴘнᴇйм:</b> \n@{}",
         "user_removed": "<emoji document_id=5235875883297824772>🗓</emoji> <b>юзᴇᴘнᴇйм ʏдᴀлᴇн!</b>",
-        "user_taken": "<emoji document_id=5237814653010076467>🗓</emoji> <b>юзᴇᴘнᴇйм @{} ʏжᴇ зᴀнят!</b>",
+        "user_taken": "<emoji document_id=5237814653010076467>🗓</emoji> <b>юзᴇᴘнᴇйм:</b>\n@{} ʏжᴇ зᴀнят!",
         "avatar_success": "<emoji document_id=5228764435362900200>🗓</emoji> <b>вᴀшᴀ ᴀвᴀтᴀᴘкᴀ оҕновлᴇнᴀ!</b>",
         "avatar_error": "<emoji document_id=5237814653010076467>🗓</emoji> <b>отвᴇтьтᴇ нᴀ фото сооҕщᴇниᴇ!</b>",
         "privacy_settings": "<emoji document_id=5237814653010076467>🗓</emoji> <b>нᴀстᴘойки конфидᴇнциᴀльности:</b>\n\n{}",
         "arg_missing": "<emoji document_id=5237814653010076467>🗓</emoji> <b>ʏкᴀжитᴇ ᴀᴘгʏмᴇнт!</b>",
-        "check_true": "<emoji document_id=5229132514060167056>🗓</emoji> <b>юзᴇᴘнᴇйм:</b> @{} <b>(достʏпᴇн!)</b>",
-        "check_false": "<emoji document_id=5235875883297824772>🗓</emoji> <b>юзᴇᴘнᴇйм:</b> @{} <b>(нᴇ достʏпᴇн!)</b>",
+        "check_true": "<emoji document_id=5229132514060167056>🗓</emoji> <b>юзᴇᴘнᴇйм:</b>\n@{} <b>(достʏпᴇн!)</b>",
+        "check_false": "<emoji document_id=5235875883297824772>🗓</emoji> <b>юзᴇᴘнᴇйм:</b>\n@{} <b>(нᴇ достʏпᴇн!)</b>",
         "check_false_args": "<emoji document_id=5237814653010076467>🗓</emoji> <b>пожᴀлʏйстᴀ впишитᴇ юзᴇᴘнᴇйм котоᴘый вы хотитᴇ пᴘовᴇᴘить...</b>",
         "full_profile_info": "<emoji document_id=5237814653010076467>🗓</emoji> Полная информация о профиле:",
         "id": "<emoji document_id=5228764435362900200>🗓</emoji> Индификатор: @{}",
         "first_name": "<emoji document_id=5237814653010076467>🗓</emoji> Нейм: {}",
         "username": "<emoji document_id=5231112502573555738>🗓</emoji> Юзернейм: @{}",
-        "bio": "<emoji document_id=5233261334841289002>🗓</emoji> Описание профиля: {}",
+        "bio": "<emoji document_id=5233261334841289002>🗓</emoji> Описание профиля: \n{}",
         "is_bot": "<emoji document_id=5231188729653127746>🗓</emoji> Бот-Аккаунт: {}",
         "verified": "<emoji document_id=5229132514060167056>🗓</emoji> Верифицированый Аккаунт: {}",
         "restricted": "<emoji document_id=5235875883297824772>🗓</emoji> Ограничение на аккаунте: {}",
